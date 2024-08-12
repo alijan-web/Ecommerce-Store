@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -289,4 +290,118 @@ body {
 #banner button:hover {
     background-color: green;
     color: white;
+}
+
+/* Boxex banner */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    
+}
+
+/* Box Styling */
+.box {
+    position: relative;
+    background-image: url('img/b17.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    text-align: start;
+    height: 300px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+#box2 {
+    background-image: url('img/b10.jpg');
+}
+.box:hover {
+    transform: translateY(-10px);
+}
+
+/* Content Styling */
+.content {
+    /* text-align: center; */
+    padding: 80px 20px;
+    border-radius: 10px;
+
+}
+
+.content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: rgba(240, 248, 255, 0.705);
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-weight: 800;
+}
+
+.content span {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px white solid;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+    font-weight: 530;
+}
+
+.box:hover button{
+    background-color: green;
+    border: 1px green solid;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        height: 250px;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        height: 200px;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content h4 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
