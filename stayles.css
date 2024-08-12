@@ -405,3 +405,80 @@ button {
         font-size: 0.9rem;
     }
 }
+
+    /* Banner Card */
+/* Card Wrapper */
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:nth-child(1) {
+    background-image: url('img/b7.jpg'); /* Replace with your image URL */
+}
+
+.card:nth-child(2) {
+    background-image: url('img/b18.jpg'); /* Replace with your image URL */
+}
+
+.card:nth-child(3) {
+    background-image: url('img/b4.jpg'); /* Replace with your image URL */
+}
+
+/* Card Content Styling */
+.card-content {
+    padding: 20px;
+    width: 100%;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        height: 200px;
+    }
+    .card-content h2 {
+        font-size: 1.2rem;
+    }
+    .card-content p {
+        font-size: 0.9rem;
+    }
+}
